@@ -60,5 +60,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'devise'
+
+# 画像の投稿機能を実装する
+# refileは、ファイルをアップロードできるようにするgemである。
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+# refile-mini_magickは、アップロードした画像のリサイズを行えるgemである。リサイズ機能があると、投稿された画像を最適なサイズに変換できるようになる。
+gem "refile-mini_magick"
+
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.13'
